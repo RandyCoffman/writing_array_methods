@@ -6,11 +6,12 @@ class Join_method < Minitest::Test
 		assert_equal(true, true)
 	end
 
-	def test_array
-		assert_equal(Array, array.class)
+	def test_string
+		assert_equal(String, join_method(["hello"]).class)
 	end
 
-	def test_string
-		assert_equal(String, string.class)
+	def test_join
+		array = ["hello", "what", "is", "your", "name"]
+		assert_equal("hello, what, is, your, name", join_method(array))
 	end
 end
