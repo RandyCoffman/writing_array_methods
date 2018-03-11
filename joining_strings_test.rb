@@ -11,7 +11,22 @@ class Join_method < Minitest::Test
 	end
 
 	def test_join
-		array = ["hello", "what", "is", "your", "name"]
-		assert_equal("hello, what, is, your, name", join_method(array))
+		array = ["hello", "what", "is", "your", "name?"]
+		assert_equal("hello, what, is, your, name?", join_method(array))
+	end
+
+	def test_join2
+		array = ["do", "you", "like", "alpacas?"]
+		assert_equal("do, you, like, alpacas?", join_method(array))
+	end
+
+	def test_join3
+		array = ["a", "chicken", "fought", "my", "window"]
+		assert_equal("a, chicken, fought, my, window", join_method(array))
+	end
+
+	def test_join4
+		array = ["narwhals", "have", "a", "pointy", "horn"]
+		assert_equal("narwhals, have, a, pointy, horn", join_method(array))
 	end
 end
