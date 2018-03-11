@@ -7,6 +7,10 @@ class Join_method < Minitest::Test
 	end
 
 	def test_array
-		assert_equal(Array, join_method.class)
+		assert_equal(Array, array.class)
+	end
+
+	def test_string
+		assert_equal(String, string.class)
 	end
 end
