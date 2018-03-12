@@ -7,6 +7,10 @@ class Push_method < Minitest::Test
 	end
 
 	def test_array
-		assert_equal(Array, push.class)
+		assert_equal(Array, push("a").class)
+	end
+
+	def test_push
+		assert_equal(["1", "2", "3", "4", "5"], push("5"))
 	end
 end
